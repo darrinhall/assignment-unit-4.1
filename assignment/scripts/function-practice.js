@@ -12,50 +12,88 @@ function hello() {
 console.log('Test - should say "Hello World!"', hello());
 
 
-// 2. Function to return an personalized hello, using the `name` argument.
+// 2. Function to return a personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
+  return 'Hello, ' + name + '!';
 }
-// Remember to call the function to test
 
+// Remember to call the function to test
+console.log(helloName('Darrin'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(firstNumber, secondNumber) {
+  // firstNumber = 12;
+  // secondNumber = 5;
   // return firstNumber + secondNumber;
+  return firstNumber + secondNumber;
 }
-
+console.log(addNumbers(12, 5));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(numberOne, numberTwo, numberThree) {
+  // numberOne = 6;
+  // numberTwo = 7;
+  // numberThree = 4;
+  return numberOne * numberTwo * numberThree;
 }
+console.log(multiplyThree(6, 7, 4));
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    // console.log(positive);
+    return true;
   }
-  return;
+  else {
+    // console.log(negative);
+    return false;
+  }
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-
+// console.log(5);
+// console.log(-3);
+console.log(isPositive(7));
+console.log(isPositive(-4));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+// let array = ['football', 'baseball', 'basketball', 'tennis']
 function getLast(array) {
+  // if (index >= 0) {
+  // return array.length-1;
+  // }
+  // else {
+  //   return 'undefined';
+  //   }
 
-}
+ if (array.length-1 > 0) {
+  return array[array.length-1];
+  }
+  else {
+    return 'undefined';
+    }
+  }
+  
+console.log(getLast(['football', 'baseball', 'basketball', 'tennis', 'soccer']));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
+  for (var index = 0; index < array.length; index++) {
+    if (array[index] == value) return true;
+    }
+  //   else {
+  //     return false;
+  // }
 }
+console.log(find(14, [2, 4, 84, 75, 1, 92, 14, 7, 18, 37]));
+console.log(find(49, [2, 4, 84, 75, 1, 92, 14, 7, 18, 37]));
+
 
 // ----------------------
 // Stretch Goals
