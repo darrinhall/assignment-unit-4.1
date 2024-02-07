@@ -29,6 +29,7 @@ function addNumbers(firstNumber, secondNumber) {
   return firstNumber + secondNumber;
 }
 console.log(addNumbers(12, 5));
+console.log(addNumbers(94, 53));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(numberOne, numberTwo, numberThree) {
@@ -38,6 +39,7 @@ function multiplyThree(numberOne, numberTwo, numberThree) {
   return numberOne * numberTwo * numberThree;
 }
 console.log(multiplyThree(6, 7, 4));
+console.log(multiplyThree(12, 37, 24));
 
 
 // 5. Function that will return true if a number is positive, 
@@ -58,6 +60,7 @@ function isPositive(number) {
 // console.log(-3);
 console.log(isPositive(7));
 console.log(isPositive(-4));
+console.log(isPositive(-12));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
@@ -85,11 +88,12 @@ console.log(getLast(['football', 'baseball', 'basketball', 'tennis', 'soccer']))
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
   for (var index = 0; index < array.length; index++) {
-    if (array[index] == value) return true;
+    if (array[index] === value) {
+      return true;
     }
-  //   else {
-  //     return false;
-  // }
+    // loop is done
+  }
+      return false;
 }
 console.log(find(14, [2, 4, 84, 75, 1, 92, 14, 7, 18, 37]));
 console.log(find(49, [2, 4, 84, 75, 1, 92, 14, 7, 18, 37]));
